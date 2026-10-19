@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d1210">
+  <meta name="description" content="TaskFlow نظام إدارة المشاريع والمهام من تطوير سما تك للهندسة والتكنولوجيا.">
+  <title>TaskFlow | سما تك للهندسة والتكنولوجيا</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/brand-config.js" defer></script>
+  <script src="/assets/js/app.js" defer></script>
+  <script src="/assets/js/i18n.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand-lockup" href="/" aria-label="الصفحة الرئيسية TaskFlow">
+        <span class="brand-copy">
+          <span class="brand-name" data-brand="companyNameShort">سما تك</span>
+          <span class="brand-subtitle">للهندسة والتكنولوجيا</span>
+        </span>
+      </a>
+      <div class="topbar-right">
+        <button class="language-toggle" type="button" data-language-toggle data-i18n-skip>English</button>
+        <span class="stage-pill"><span class="tiny-dot" aria-hidden="true"></span> إدارة المشاريع · المرحلة الثالثة</span>
+        <span class="system-pill"><span data-brand="productName">TaskFlow</span><span aria-hidden="true">/</span><span>0.3.0</span></span>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">منتج من تطوير سما تك</p>
+          <h1 id="page-title"><span data-brand="productName">TaskFlow</span><br>عمل منظّم، ونتائج أوضح.</h1>
+          <p class="hero-description" data-brand="tagline">نظّم المشاريع، وأدر المهام، وحقّق النتائج.</p>
+          <div class="hero-actions"><a class="hero-action-primary" href="/login.html">الدخول إلى النظام <span aria-hidden="true">←</span></a><a class="hero-action-secondary" href="/setup.html">إعداد المدير الأول</a></div>
+          <div class="hero-meta" aria-label="معلومات المنتج">
+            <span class="meta-chip"><strong>المنتج</strong> · إدارة المشاريع والمهام</span>
+            <span class="meta-chip"><strong>المرحلة</strong> · إدارة المشاريع</span>
+            <span class="meta-chip"><strong>التقنيات</strong> · Node.js وSQLite</span>
+          </div>
+        </div>
+
+        <aside class="hero-side" aria-label="حالة النظام">
+          <div class="side-top">
+            <span class="side-label">نظرة عامة على النظام</span>
+            <span class="side-icon" aria-hidden="true">✓</span>
+          </div>
+          <div class="status-line"><span class="health-dot" data-health-dot aria-hidden="true"></span><span data-health-text>جارٍ فحص خدمات النظام…</span></div>
+          <p class="side-note">تعرض الحالة نتيجة فحص الخادم وقاعدة البيانات الفعلية، دون إنشاء مشاريع أو مستخدمين تجريبيين بشكل تلقائي.</p>
+          <div class="side-divider"></div>
+          <div class="side-foot"><span data-refreshed-at>جارٍ الاتصال بالخادم…</span><span class="status-label">نسخة محلية</span></div>
+        </aside>
+      </section>
+
+      <section aria-labelledby="foundation-heading">
+        <div class="section-heading">
+          <div>
+            <h2 id="foundation-heading">حالة النظام</h2>
+            <p>فحص الخادم وقاعدة البيانات وبنية الجداول.</p>
+          </div>
+          <button class="refresh-button" type="button" data-refresh-health>تحديث الحالة ↻</button>
+        </div>
+        <div class="status-grid">
+          <article class="status-card"><div class="card-top"><span class="card-label">واجهة API</span><span class="card-icon" aria-hidden="true">↗</span></div><div class="card-value" data-api-state>جارٍ الفحص…</div><div class="card-caption">خدمة Express ونقطة فحص الصحة</div></article>
+          <article class="status-card"><div class="card-top"><span class="card-label">قاعدة بيانات SQLite</span><span class="card-icon" aria-hidden="true">▤</span></div><div class="card-value" data-db-state>جارٍ الفحص…</div><div class="card-caption">قاعدة البيانات الدائمة للتطبيق</div></article>
+          <article class="status-card"><div class="card-top"><span class="card-label">مخطط قاعدة البيانات</span><span class="card-icon" aria-hidden="true">⌘</span></div><div class="card-value" data-schema-state>جارٍ الفحص…</div><div class="schema-detail"><span>الجداول الأساسية</span><span data-schema-tables>جارٍ فحص الجداول…</span></div></article>
+        </div>
+      </section>
+
+      <section class="foundation-note" aria-label="نطاق المرحلة">
+        <div><h3>حل إداري قابل للتخصيص</h3><p>يجمع TaskFlow بين تسجيل الدخول وإدارة الصلاحيات والمشاريع ضمن واجهة عربية واضحة، ليكون نموذجاً عملياً تعرض من خلاله سما تك قدراتها في تطوير الحلول البرمجية للشركات.</p></div>
+        <span class="note-label">المرحلة 3 من 8</span>
+      </section>
+    </main>
+
+    <footer>
+      <div><strong data-brand="productName">TaskFlow</strong> · <span data-brand="productDescriptor">نظام إدارة المشاريع والمهام</span></div>
+      <div class="footer-right">تطوير <strong data-brand="companyName">سما تك للهندسة والتكنولوجيا</strong></div>
+    </footer>
+  </div>
+</body>
+</html>

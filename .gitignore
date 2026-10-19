@@ -1,0 +1,28 @@
+# Environment secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Dependencies and runtime output
+node_modules/
+npm-debug.log*
+logs/
+*.log
+
+# Local database files and SQLite sidecars
+*.sqlite
+*.sqlite3
+*.db
+*.db-shm
+*.db-wal
+/data/
+
+# Test and coverage output
+coverage/
+.nyc_output/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

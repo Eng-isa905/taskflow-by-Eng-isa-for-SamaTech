@@ -1,0 +1,17 @@
+.git
+.github
+.gitignore
+.env
+.env.*
+!.env.example
+node_modules
+npm-debug.log*
+*.sqlite
+*.sqlite3
+*.db
+*.db-shm
+*.db-wal
+data
+coverage
+.DS_Store
+Thumbs.db

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0d1210">
+  <meta name="description" content="إدارة المشاريع في TaskFlow من تطوير سما تك للهندسة والتكنولوجيا.">
+  <title>إدارة المشاريع | TaskFlow</title>
+  <link rel="stylesheet" href="/assets/css/style.css"><link rel="stylesheet" href="/assets/css/auth.css"><link rel="stylesheet" href="/assets/css/projects.css">
+  <script src="/assets/js/brand-config.js" defer></script><script src="/assets/js/auth-client.js" defer></script><script src="/assets/js/projects.js" defer></script><script src="/assets/js/i18n.js" defer></script>
+</head>
+<body class="auth-page projects-page">
+  <header class="auth-header projects-header">
+    <a class="auth-product" href="/" aria-label="الصفحة الرئيسية TaskFlow"><span class="auth-product-name"><span data-brand="productName">TaskFlow</span></span><span class="auth-product-byline" data-brand="companyName">سما تك للهندسة والتكنولوجيا</span></a>
+    <nav class="page-nav" aria-label="التنقل الرئيسي"><a href="/projects.html" aria-current="page">المشاريع</a><a href="/workspace.html">حسابي</a></nav>
+    <button class="language-toggle" type="button" data-language-toggle data-i18n-skip>English</button>
+    <div class="projects-userbar"><span class="projects-user-name" data-current-user>جارٍ تحميل المستخدم…</span><button class="auth-secondary-button workspace-logout-button" type="button" data-logout>تسجيل الخروج</button></div>
+  </header>
+
+  <main class="projects-main">
+    <section class="projects-welcome">
+      <div><span class="auth-eyebrow">مساحة العمل · سما تك</span><h1>إدارة المشاريع</h1><p>أنشئ المشاريع، حدّث حالتها، وتابع المسؤول والمواعيد ونسبة الإنجاز.</p></div>
+      <button class="primary-action" type="button" data-new-project hidden><span aria-hidden="true">＋</span> مشروع جديد</button>
+    </section>
+
+    <div class="auth-message" data-page-message role="status" aria-live="polite"></div>
+
+    <section class="project-stats" aria-label="ملخص المشاريع">
+      <article class="project-stat"><span>إجمالي المشاريع</span><strong data-stat-total>—</strong><small>حسب نتائج البحث الحالية</small></article>
+      <article class="project-stat"><span>مشاريع نشطة</span><strong data-stat-active>—</strong><small>قيد العمل</small></article>
+      <article class="project-stat"><span>مشاريع مكتملة</span><strong data-stat-completed>—</strong><small>تم إنهاؤها</small></article>
+      <article class="project-stat"><span>مشاريع متأخرة</span><strong data-stat-delayed>—</strong><small>تجاوزت موعد الانتهاء</small></article>
+    </section>
+
+    <section class="projects-list-panel">
+      <div class="projects-list-heading"><div><h2>قائمة المشاريع</h2><p>البيانات المعروضة مأخوذة من قاعدة بيانات النظام.</p></div><span class="projects-count" data-project-count>0 مشروع</span></div>
+      <form class="project-filters" data-filter-form>
+        <label class="search-field"><span>بحث</span><input type="search" name="q" placeholder="ابحث بالاسم أو الرقم المرجعي أو الوصف"></label>
+        <label class="status-field"><span>حالة المشروع</span><select name="status"><option value="all">كل الحالات</option><option value="planned">مخطط</option><option value="active">نشط</option><option value="on_hold">متوقف مؤقتاً</option><option value="completed">مكتمل</option><option value="cancelled">ملغى</option></select></label>
+        <button class="filter-button" type="submit">تطبيق التصفية</button><button class="clear-filter-button" type="reset">مسح</button>
+      </form>
+      <div class="projects-list" data-project-list aria-live="polite"><div class="projects-loading">جارٍ تحميل المشاريع…</div></div>
+      <div class="projects-empty" data-projects-empty hidden><div class="empty-symbol" aria-hidden="true">▤</div><h3>لا توجد مشاريع لعرضها</h3><p>أضف مشروعاً جديداً أو غيّر خيارات البحث والتصفية.</p><button type="button" class="primary-action primary-action-small" data-empty-new hidden>إنشاء أول مشروع</button></div>
+    </section>
+    <p class="projects-note">TaskFlow · منتج من تطوير سما تك للهندسة والتكنولوجيا</p>
+  </main>
+
+  <dialog class="project-dialog" data-project-dialog aria-labelledby="project-dialog-title">
+    <form class="project-form" data-project-form>
+      <div class="dialog-heading"><div><span class="auth-eyebrow">بيانات المشروع</span><h2 id="project-dialog-title" data-project-dialog-title>إنشاء مشروع جديد</h2></div><button type="button" class="dialog-close" data-close-project aria-label="إغلاق">×</button></div>
+      <div class="auth-message" data-form-message role="status" aria-live="polite"></div>
+      <input type="hidden" name="projectId">
+      <div class="project-form-grid">
+        <label class="project-field project-field-wide"><span>اسم المشروع <i>*</i></span><input name="name" type="text" minlength="2" maxlength="120" placeholder="مثال: تطوير بوابة الشركة" required></label>
+        <label class="project-field project-field-wide"><span>وصف المشروع</span><textarea name="description" rows="3" maxlength="2000" placeholder="نبذة مختصرة عن هدف المشروع ونطاقه"></textarea></label>
+        <label class="project-field"><span>الحالة</span><select name="status"><option value="planned">مخطط</option><option value="active">نشط</option><option value="on_hold">متوقف مؤقتاً</option><option value="completed">مكتمل</option><option value="cancelled">ملغى</option></select></label>
+        <label class="project-field"><span>المسؤول</span><select name="ownerId"><option value="">لم يُحدد بعد</option></select></label>
+        <label class="project-field"><span>تاريخ البداية</span><input name="startDate" type="date"></label>
+        <label class="project-field"><span>تاريخ الانتهاء</span><input name="dueDate" type="date"></label>
+      </div>
+      <div class="dialog-actions"><button type="button" class="clear-filter-button" data-close-project>إلغاء</button><button type="submit" class="primary-action" data-save-project>حفظ المشروع</button></div>
+    </form>
+  </dialog>
+
+  <dialog class="project-dialog project-details-dialog" data-details-dialog aria-labelledby="details-title">
+    <div class="project-details-content"><div class="dialog-heading"><div><span class="auth-eyebrow" data-details-code>تفاصيل المشروع</span><h2 id="details-title" data-details-name>—</h2></div><button type="button" class="dialog-close" data-close-details aria-label="إغلاق">×</button></div>
+      <p class="details-description" data-details-description>—</p>
+      <div class="details-grid"><div><span>الحالة</span><strong data-details-status>—</strong></div><div><span>المسؤول</span><strong data-details-owner>—</strong></div><div><span>تاريخ البداية</span><strong data-details-start>—</strong></div><div><span>تاريخ الانتهاء</span><strong data-details-due>—</strong></div><div><span>نسبة الإنجاز</span><strong data-details-progress>0%</strong></div><div><span>عدد المهام</span><strong data-details-tasks>0</strong></div></div>
+      <div class="details-tasks"><h3>المهام المرتبطة</h3><div data-details-task-list><p class="directory-empty">لا توجد مهام مرتبطة بهذا المشروع حتى الآن.</p></div><p class="form-hint">إدارة المهام ستُضاف في المرحلة التالية من النموذج الأولي.</p></div>
+      <div class="dialog-actions"><button type="button" class="clear-filter-button" data-close-details>إغلاق</button><button type="button" class="primary-action" data-edit-from-details hidden>تعديل المشروع</button></div>
+    </div>
+  </dialog>
+
+  <footer class="auth-foot"><strong>TaskFlow</strong> · نظام إدارة المشاريع والمهام<br>تطوير <strong>سما تك للهندسة والتكنولوجيا</strong></footer>
+</body></html>
